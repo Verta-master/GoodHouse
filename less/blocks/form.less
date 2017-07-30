@@ -28,6 +28,12 @@
     padding: 35px;
     padding-bottom: 45px;
   }
+  
+  &--promo {
+    border: 1px solid @milk;
+    padding: 25px 32px;
+    width: 627px;
+  }
 }
 
 .form__area,
@@ -47,6 +53,10 @@
   
   &--main {
     width: 298px;
+  }
+  
+  &--promo {
+    background-color: rgba(250,250,250,0.9);
   }
 }
 
@@ -83,16 +93,28 @@
     background-position: center;
   }
   
-  &:first-of-type::before {
+  &--name::before {
     background-image: url(../img/icon-user.png);
   }
   
-  &:nth-of-type(2)::before {
+  &--email::before {
     background-image: url(../img/icon-mail.png);
   }
   
-  &:nth-of-type(3)::before {
+  &--number::before {
     background-image: url(../img/icon-number.png);
+  }
+    
+  &--tel::before {
+    background-image: url(../img/icon-phone.png);
+  }
+  
+  &--question {
+    margin-bottom: 0;
+  
+    &::before {
+      background-image: url(../img/icon-question.png);
+    }
   }
   
   &::after {
@@ -130,6 +152,10 @@
   &--info {
     margin: 0;
   }
+  
+  &--project {
+    margin-right: 0;
+  }
 }
 
 .form__title {
@@ -147,6 +173,10 @@
     font-size: 14px;
     margin: 0;
     margin-bottom: 35px;
+  }
+  
+  &--promo {
+    margin-bottom: 30px;
   }
 }
 
@@ -179,6 +209,15 @@
   align-items: center;
   margin-top: 15px;
   padding-left: 50px;
+  
+  img {
+    border-radius: 50%;
+  }
+  
+  &--director {
+    flex-direction: column;
+    padding-left: 0;
+  }
 }
 
 .form__text {
@@ -186,8 +225,44 @@
   margin-left: 20px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
+  
+  &--bold {
+    font-weight: 700;
+    width: 300px;
+  }
 }
 
 .form__main {
   width: 211px; 
+}
+
+.form__download {
+  padding-left: 30px;
+  position: relative;
+  display: block;
+  color: @navy;
+  line-height: 20px;
+  font-family: "Times New Roman", "Times", serif;
+  font-weight: 700;
+  width: 160px;
+    
+  &:hover {
+    color: @blue;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 22px;
+    top: 0;
+    left: 0;
+    background-image: url(../img/icon-attach.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.form__project {
+  width: 265px;
 }
