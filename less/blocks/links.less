@@ -1,0 +1,45 @@
+.links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links__item {
+  padding-left: 50px;
+  position: relative;
+  
+  a {
+    display: block;
+    color: @blue;
+    line-height: 20px;
+    font-family: "Times New Roman", "Times", serif;
+    font-weight: 700;
+    width: 160px;
+    
+    &:hover {
+      color: @red;
+    }
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 36px;
+    top: 5px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &:first-child::before {
+    background-image: url(../img/icon-list.png);
+  }
+  
+  &:nth-child(2)::before {
+    background-image: url(../img/icon-file.png);
+  }
+}
